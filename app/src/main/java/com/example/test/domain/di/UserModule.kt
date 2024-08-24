@@ -6,6 +6,7 @@ import com.example.test.domain.dao.UserDao
 import com.example.test.domain.repository.MoviesRepository
 import com.example.test.domain.usecase.MoviesUcImpl
 import com.example.test.domain.usecase.MoviesUseCase
+import com.example.test.network.service.NetworkService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,8 +24,8 @@ object UserModule {
 
     @Singleton
     @Provides
-    fun getRepository(): MoviesRepository {
-        return MoviesRepImpl()
+    fun getRepository(networkService: NetworkService): MoviesRepository {
+        return MoviesRepImpl(networkService)
     }
 
     @Singleton

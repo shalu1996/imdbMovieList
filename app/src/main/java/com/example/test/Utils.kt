@@ -1,5 +1,8 @@
 package com.example.test
 
+const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500/"
+const val IMAGE_BASE_ORIGINAL_URL = "https://image.tmdb.org/t/p/original/"
+const val ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYWU0Y2NjYzI2Y2RiMTY2MjBiMmI3NGNhNWMxOGQ0NSIsIm5iZiI6MTcyNDQxODM4MC42MjgyMzYsInN1YiI6IjY2Yzg3OWQyZGNhZDc5M2I0MzNjZTAyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Gmn6aKl7n3SDnZz71iSQrppVM2DSK8qMLrQJ5ZKaPMs"
 const val RESPONSE_STRING = "{\n" +
         "    \"status\": \"OK\",\n" +
         "    \"copyright\": \"Copyright (c) 2022 The New York Times Company.  All Rights Reserved.\",\n" +
@@ -65,6 +68,6 @@ const val RESPONSE_STRING = "{\n" +
         "}"
 
 enum class NAV_OPTION{
-    USER_SCREEN,
-    NEWS_SCREEN
+    MOVIE_LIST_SCREEN,
+    DETAIL_SCREEN
 }

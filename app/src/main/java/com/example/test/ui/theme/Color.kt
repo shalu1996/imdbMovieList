@@ -13,6 +13,7 @@ val lightGreen = Color(0xFFB1D8B7)
 val darkGreen = Color(0xFF139913)
 val lightBlack = Color(0xFF454545)
 val lightGreenMore = Color(0xFFFF139913)
+val lightGrey = Color(0xFF9AA4B2)
 
 val ShimmerColorShades = listOf(
     Color.LightGray.copy(0.9f),
