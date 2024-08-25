@@ -121,13 +121,13 @@ public final class MovieDao_Impl implements MovieDao {
   }
 
   @Override
-  public Object insert(final Movie user, final Continuation<? super Unit> continuation) {
+  public Object insert(final Movie movie, final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
         __db.beginTransaction();
         try {
-          __insertionAdapterOfMovie.insert(user);
+          __insertionAdapterOfMovie.insert(movie);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
@@ -138,13 +138,13 @@ public final class MovieDao_Impl implements MovieDao {
   }
 
   @Override
-  public Object deleteUser(final Movie user, final Continuation<? super Unit> continuation) {
+  public Object deleteMovie(final Movie movie, final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
         __db.beginTransaction();
         try {
-          __deletionAdapterOfMovie.handle(user);
+          __deletionAdapterOfMovie.handle(movie);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
@@ -155,7 +155,7 @@ public final class MovieDao_Impl implements MovieDao {
   }
 
   @Override
-  public Object getUsers(final Continuation<? super List<Movie>> continuation) {
+  public Object getMovies(final Continuation<? super List<Movie>> continuation) {
     final String _sql = "SELECT * FROM movie";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
