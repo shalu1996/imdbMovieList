@@ -12,8 +12,6 @@ interface NetworkService {
     @GET("movie/week")
     suspend fun getMovies(
         @Query("language") language: String = "en-US",
-        @Query("api_key") apiKey: String = "0ae4cccc26cdb16620b2b74ca5c18d45",
-        @Query("page") page: Int,
-        @Query("limit") limit: Int = 20
+        @Query("api_key") apiKey: String = "0ae4cccc26cdb16620b2b74ca5c18d45"
     ): Response<MoviesResponse>
 }

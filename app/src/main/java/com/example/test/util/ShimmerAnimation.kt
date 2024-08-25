@@ -40,7 +40,7 @@ fun ShimmerAnimation(shape: Shape, modifier: Modifier, color: List<Color> = Shim
             /*
              Tween Animates between values over specified [durationMillis]
             */
-            tween(durationMillis = 2500, easing = FastOutSlowInEasing),
+            tween(durationMillis = 1000, easing = FastOutSlowInEasing),
             RepeatMode.Reverse
         ), label = ""
     )

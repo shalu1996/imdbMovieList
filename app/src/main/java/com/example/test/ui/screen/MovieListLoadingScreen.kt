@@ -19,7 +19,7 @@ import com.example.test.util.ShimmerAnimation
 
 @Composable
 fun MovieListLoadingScreen() {
-    val colors = listOf(Color.DarkGray, Color.LightGray)
+    //val colors = listOf(Color.Magenta, Color.Green)
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -28,7 +28,7 @@ fun MovieListLoadingScreen() {
             shape = RoundedCornerShape(10), modifier = Modifier
                 .fillMaxWidth()
                 .height(70.dp)
-                .padding(10.dp), colors
+                .padding(10.dp)
         )
         Spacer(modifier = Modifier.padding(top = 20.dp))
         repeat(10) {
@@ -41,13 +41,13 @@ fun MovieListLoadingScreen() {
                         ShimmerAnimation(
                             shape = RoundedCornerShape(10), modifier = Modifier
                                 .size(200.dp, 200.dp)
-                                .padding(start = 20.dp, top = 20.dp, bottom = 20.dp, end = 10.dp), colors
+                                .padding(start = 20.dp, top = 20.dp, bottom = 20.dp, end = 10.dp)
                         )
                         ShimmerAnimation(
                             shape = RoundedCornerShape(10), modifier = Modifier
                                 .width(200.dp)
                                 .height(20.dp)
-                                .padding(start = 20.dp, end = 10.dp), colors
+                                .padding(start = 20.dp, end = 10.dp)
                         )
                     }
                 }

@@ -7,5 +7,5 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class MoviesRepImpl @Inject constructor(private val networkService: NetworkService) : MoviesRepository {
-    override suspend fun getMovies(): Response<MoviesResponse> = networkService.getMovies()z
+    override suspend fun getMovies(): Response<MoviesResponse> = networkService.getMovies()
 }
