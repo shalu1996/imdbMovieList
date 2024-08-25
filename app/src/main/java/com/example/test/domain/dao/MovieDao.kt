@@ -8,14 +8,14 @@ import androidx.room.Query
 import com.example.test.data.model.Movie
 
 @Dao
-interface UserDao {
+interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(user: Movie)
+    suspend fun insert(movie: Movie)
 
     @Query("SELECT * FROM movie")
-    suspend fun getUsers(): List<Movie>
+    suspend fun getMovies(): List<Movie>
 
     @Delete
-    suspend fun deleteUser(user: Movie)
+    suspend fun deleteMovie(movie: Movie)
 }
